@@ -48,6 +48,41 @@ public class MainTest {
         Assert.assertTrue(Task4.getIsEmpty(null), "String should be null");
     }
 
+    @Test
+    public void testTrim() {
+        Assert.assertEquals(Task4.getTrim("  trim "), "trim");
+    }
+
+
+    @Test
+    public void testReverse() {
+        Assert.assertEquals(Task4.getReverse("esrever"), "reverse");
+    }
+
+    @Test
+    public void testTruncate() {
+        Assert.assertEquals(Task4.getTruncate("Hello, World", 5), "Hello");
+    }
+
+    @Test
+    public void testSubstring() {
+        Assert.assertEquals(Task4.getSubstring("Hello, World", 7), "World");
+    }
+
+    @Test
+    public void testReplace() {
+        Assert.assertEquals(Task4.getReplace("Hello, World", "World", "Java" ), "Hello, Java");
+    }
+
+    @Test
+    public void testCountMatches() {
+        Assert.assertEquals(Task4.getCountMatches("Hello, World", "o"), 2);
+    }
+
+    @Test
+    public void testStartsWith() {
+        Assert.assertTrue(Task4.getStartsWith("Hello, World", "H"), "string should starts with H");
+    }
 
     @Test
     public void testSum() {
