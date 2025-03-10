@@ -13,6 +13,12 @@ public class MainTest {
    и протестировать его. Тесты должны запускаться через TestNG.*/
 
     @Test
+    public void testMultipl() {
+        Assert.assertEquals(Task4.getMultipl(5,3), 15);
+    }
+
+
+    @Test
     public void testSub() {
 
         Assert.assertEquals(Task4.getSub(10, 5), 5);
@@ -21,6 +27,27 @@ public class MainTest {
         Assert.assertEquals(Task4.getSub(-30, 5), -35);
 
     }
+
+    @Test
+    public void testLowerCase() {
+        Assert.assertEquals(Task4.getLowerCase("TO LOWER CASE"), "to lower case");
+    }
+
+    @Test
+    public void testLowerCaseNull() {
+        Assert.assertNull(Task4.getLowerCase(null));
+    }
+
+    @Test
+    public void testIsEmpty() {
+        Assert.assertTrue(Task4.getIsEmpty(""), "String should be empty");
+    }
+
+    @Test
+    public void testIsNull() {
+        Assert.assertTrue(Task4.getIsEmpty(null), "String should be null");
+    }
+
 
     @Test
     public void testSum() {
